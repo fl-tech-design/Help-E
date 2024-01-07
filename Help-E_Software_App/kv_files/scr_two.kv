@@ -1,0 +1,44 @@
+<ScrTwo>:
+    BoxBlack:
+        name: "box_main"
+        orientation: "vertical"
+        padding: 3
+        
+        BoxYellow1:
+            name: "box_title"
+            padding: 2
+            size_hint_y: 0.1
+            BoxBlack:
+                padding: 3
+                BoxYellow1:
+                    padding: 3
+                    BoxBlack:
+                        size_hint_x: 0.3
+                        LabelTitel:
+                        BoxBlack:            
+        
+        BoxYellow1:
+            name: "box_body"
+            padding: 2
+            BoxBlack:
+                orientation: "vertical"
+                BoxBlack:
+                    name: "box_body_up"
+                    spacing: 2
+                    padding:2
+                BoxBlack:
+                    name: "box_body_down"
+                    padding: 3
+                    spacing: 2
+        
+        BoxYellow1:
+            name: "box_bottom"
+            padding: 2
+            size_hint_y: 0.1
+            BoxBlack:
+                padding: 3
+                BoxBlack:
+                    padding: 3
+                    ButtonYellow:
+                        text: "Settings" if app.scr_man.current == 'scr_one' else "back"
+                        on_release: app.change_screen("left", "scr_two") if app.scr_man.current == 'scr_one' else app.change_screen("right", "scr_one")

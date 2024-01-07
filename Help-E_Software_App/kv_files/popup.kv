@@ -1,0 +1,26 @@
+<InfoPopup>:
+    canvas.before:
+        Color:
+            rgba: grey1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    background_color: 0,0,0,1
+    separator_color: app.a_conf.colors["but_norm"]
+    padding: 2
+    size_hint: None, None
+    size: 500, 200
+    BoxBgDark:
+        orientation: 'vertical'
+        padding: 10
+        Label:
+            text: root.popup_message
+            font_size: '16sp'
+        BoxBgDark:
+            id: box_button
+            RoundedButtonLined:
+                id: but_yes
+                text: 'OK'
+                size_hint_y: None
+                height: 40
+                    : root.dismiss()
