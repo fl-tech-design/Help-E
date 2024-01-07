@@ -88,7 +88,16 @@
             BoxBlack:
                 padding: 3
                 BoxBlack:
+                    size_hint_x: 0.2
+                    Logo:
+                BoxBlack:
                     padding: 3
                     ButtonYellow:
                         text: "Settings" if app.scr_man.current == 'scr_one' else "back"
                         on_release: app.change_screen("left", "scr_two") if app.scr_man.current == 'scr_one' else app.change_screen("right", "scr_one")
+                BoxBlack:
+                    size_hint_x: 0.2
+                    Button:
+                        background_normal: "pics/But_AL_off.png"
+                        background_down: "pics/But_AL_on.png"
+                        height: "20"
